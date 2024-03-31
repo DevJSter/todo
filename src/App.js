@@ -1,13 +1,20 @@
 import "./index.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { TodoAPI } from "./TodoApi";
+import { TodoWrapperLocalStorage } from "./TodoLocalStorage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <TodoAPI />
-    </div>
+    Router >
+    (
+      <Routes>
+        <Route path="todoapi" element={<TodoAPI />} />
+        <Route path="localstorage" element={<TodoWrapperLocalStorage />} />
+        <Route />
+      </Routes>
+    )
   );
-}
+};
 
 export default App;
