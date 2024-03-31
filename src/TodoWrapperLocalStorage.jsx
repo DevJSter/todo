@@ -53,10 +53,10 @@ export const TodoWrapperLocalStorage = () => {
   };
 
   return (
-    <div className="bg-purple-900 min-h-screen flex justify-center items-center">
-      <div className="TodoWrapper bg-indigo-900 mt-5 p-8 rounded-lg">
+    <div className="bg-purple-600 min-h-screen flex justify-center items-center">
+      <div className="bg-purple-700 mt-5 p-8 rounded-lg">
         <h1 className="text-white text-center text-2xl mb-4">
-          Get Things Done!
+          Todo(Using Local Storage)
         </h1>
         <TodoForm addTodo={addTodo} />
         {todos.map((todo, index) =>
@@ -69,7 +69,7 @@ export const TodoWrapperLocalStorage = () => {
               toggleComplete={toggleComplete}
               deleteTodo={deleteTodo}
               editTodo={editTodo}
-              className="mb-4"
+              className="mb-4" 
             />
           )
         )}

@@ -5,13 +5,12 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export const Todo = ({ task, deleteTodo, editTodo, toggleComplete }) => {
   return (
-    <div className="Todo flex justify-between items-center bg-purple-900 text-white p-3 rounded-md mb-4">
-      <p
-        className={`${
-          task.completed ? "completed" : "incompleted"
-        } cursor-pointer`}
-        onClick={() => toggleComplete(task.id)}
-      >
+    <div
+      className={`Todo flex justify-between items-center ${
+        task.completed ? "line-through" : ""
+      } bg-purple-600 text-white p-3 rounded-md mb-4`}
+    >
+      <p className={`cursor-pointer`} onClick={() => toggleComplete(task.id)}>
         {task.task}
       </p>
       <div>

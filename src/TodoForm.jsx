@@ -17,7 +17,7 @@ export const TodoForm = ({ addTodo }) => {
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        className="todo-input outline-none bg-none border border-purple-600 px-4 py-2 mt-4 mb-8 w-72 text-white"
+        className="todo-input outline-none bg-none border border-purple-600 px-4 py-2 mt-4 mb-8 w-72 text-black"
         placeholder="What is the task today?"
       />
       <button

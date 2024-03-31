@@ -1,13 +1,11 @@
 import "./index.css";
-// import "./App.css";
 
-import { TodoWrapperLocalStorage } from "./TodoWrapperLocalStorage";
+import { TodoAPI } from "./TodoApi";
 
 function App() {
   return (
     <div className="App">
-      {/* <TodoWrapper  /> */}
-      <TodoWrapperLocalStorage />
+      <TodoAPI />
     </div>
   );
 }
