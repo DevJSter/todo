@@ -1,5 +1,5 @@
 import "./index.css";
-import "./App.css";
+// import "./App.css";
 
 import { TodoWrapperLocalStorage } from "./TodoWrapperLocalStorage";
 
