@@ -5,17 +5,18 @@ const Home = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="text-center">
-        <Link
-          to="/todoapi"
-          className="block bg-purple-500 text-white px-4 py-2 rounded-md mr-4 mb-4"
-        >
-          TodoAPI
+        {/* Button to navigate to "/todoapi" route */}
+        <Link to="/todoapi">
+          <button className="bg-purple-500 text-white px-4 py-2 rounded-md mr-4 mb-4">
+            TodoAPI
+          </button>
         </Link>
-        <Link
-          to="/localstorage"
-          className="block bg-purple-500 text-white px-4 py-2 rounded-md"
-        >
-          TodoLocalStorage
+
+        {/* Button to navigate to "/localstorage" route */}
+        <Link to="/localstorage">
+          <button className="bg-purple-500 text-white px-4 py-2 rounded-md">
+            TodoLocalStorage
+          </button>
         </Link>
       </div>
     </div>
