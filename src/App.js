@@ -7,15 +7,13 @@ import Home from "./Home";
 
 const App = () => {
   return (
-    Router >
-    (
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="todoapi" element={<TodoAPI />} />
         <Route path="localstorage" element={<TodoWrapperLocalStorage />} />
-        <Route />
       </Routes>
-    )
+    </Router>
   );
 };
 
