@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { TodoForm } from "./TodoForm";
-import { v4 as uuidv4 } from "uuid";
 import { Todo } from "./Todo";
 import { EditTodoForm } from "./EditTodoForm";
-uuidv4();
+
 
 export const TodoWrapperLocalStorage = () => {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+    const savedTodos = JSON.parse(localStorage.getItem("todos")) || []; //Here localStorage of browser is used to retrieve the todos of the user
     setTodos(savedTodos);
   }, []);
 
   const addTodo = (todo) => {
     const newTodos = [
-      ...todos,
-      { id: uuidv4(), task: todo, completed: false, isEditing: false },
+      ...todos, //Spread operator is used for making sure the previos todos should be there as we create a new todo
+      {
+        id: Math.floor(Math.random() * 1000000),
+        task: todo,
+        completed: false,
+        isEditing: false,
+      },
     ];
     setTodos(newTodos);
-    localStorage.setItem("todos", JSON.stringify(newTodos));
+    localStorage.setItem("todos", JSON.stringify(newTodos)); // This is to store the data in the localstorage as even though we refresh or restart the browser the todos should be there
   };
 
   const toggleComplete = (id) => {
@@ -69,7 +73,7 @@ export const TodoWrapperLocalStorage = () => {
               toggleComplete={toggleComplete}
               deleteTodo={deleteTodo}
               editTodo={editTodo}
-              className="mb-4" 
+              className="mb-4"
             />
           )
         )}

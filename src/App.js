@@ -1,9 +1,9 @@
 import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { TodoAPI } from "./TodoApi";
-import { TodoWrapperLocalStorage } from "./TodoLocalStorage";
-import Home from "./Home";
+import { TodoAPI } from "./components/TodoApi";
+import { TodoWrapperLocalStorage } from "./components/TodoLocalStorage";
+import Home from "./components/Home";
 
 const App = () => {
   return (
