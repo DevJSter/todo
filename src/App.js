@@ -10,8 +10,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="todoapi" element={<TodoAPI />} />
-        <Route path="localstorage" element={<TodoWrapperLocalStorage />} />
+        <Route path="/todoapi" element={<TodoAPI />} />
+        <Route path="/localstorage" element={<TodoWrapperLocalStorage />} />
       </Routes>
     </Router>
   );
